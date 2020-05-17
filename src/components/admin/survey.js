@@ -335,8 +335,10 @@ const Survey = compose(
                 props.mutate({
                     variables: {
                         input: survey
-                    }
-                }).then(() => props.data.refetch())
+                    }, options: {
+                        awaitRefetchQueries: true
+                    },
+                })
             },
         }),
     }),
