@@ -336,11 +336,7 @@ const Survey = compose(
                     variables: {
                         input: survey
                     }
-                }).then(({ data }) => {
-                    console.log('got data', data);
-                }).catch((error) => {
-                    console.log('there was an error sending the query', error);
-                })
+                }).then(() => this.props.data.refetch())
             },
         }),
     }),
