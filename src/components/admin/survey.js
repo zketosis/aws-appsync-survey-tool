@@ -336,7 +336,7 @@ const Survey = compose(
                     variables: {
                         input: survey
                     }
-                }).then(() => this.props.data.refetch())
+                }).then(() => props.data.refetch())
             },
         }),
     }),
