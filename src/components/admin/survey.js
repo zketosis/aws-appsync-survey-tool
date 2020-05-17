@@ -338,7 +338,11 @@ const Survey = compose(
                     }, options: {
                         awaitRefetchQueries: true
                     },
-                })
+                }).then(({ data }) => {
+                    console.log('got data', data);
+                }).catch((error) => {
+                    console.log('there was an error sending the query', error);
+                });
             },
         }),
     }),
